@@ -1,0 +1,20 @@
+package basics;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class ZapierLogo {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.gecko.driver", "/Users/josh/eclipse/java-oxygen/geckodriver");
+		
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://zapier.com");
+		System.out.println("From homepage, not logged in.");
+		System.out.println("Logo displays as expected.");driver.findElement(By.xpath(".//*[@id='static-content']/div/div[1]/div/div[1]")).isDisplayed();
+		
+	}
+
+}
